@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script>
+        function checkFormSubmission(event) {
+            alert("Form is being submitted");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup</h2>
+        <form method="POST" action="{% url 'signup' %}" onsubmit="checkFormSubmission(event)">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div class="form-group">
+                <label for="id_username">Username:</label>
+                {{ form.username }}
+                {{ form.username.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_email">Email:</label>
+                {{ form.email }}
+                {{ form.email.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_phone_number">Phone Number:</label>
+                {{ form.phone_number }}
+                {{ form.phone_number.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_password1">Password:</label>
+                {{ form.password1 }}
+                {{ form.password1.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_password2">Confirm Password:</label>
+                {{ form.password2 }}
+                {{ form.password2.errors }}
+            </div>
+            <div class="form-group">
+                <label for="id_user_type">Are you a:</label><br>
+                {{ form.user_type }}
+                {{ form.user_type.errors }}
+            </div>
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>

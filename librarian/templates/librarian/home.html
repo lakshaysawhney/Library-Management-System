@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>  
+    <div class="container">
+        <h1>Welcome to the Library Management System!</h1>
+        <div>
+            New here?
+            <button type="submit"><a href="{% url 'signup' %}">Signup</a></button>
+        </div>
+        <button type="submit"><a href="{% url 'login' %}">Login</a></button>
+    </div>
+</body>
+</html>

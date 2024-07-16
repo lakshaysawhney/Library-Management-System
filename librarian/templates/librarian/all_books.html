@@ -1,0 +1,59 @@
+<!-- For Librarian -->
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>All Books</h1>
+        {% if books %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Available</th>
+                    <th>Issued</th>
+                    <th>Issued To</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.available|yesno }}</td>
+                        <td>{{ book.issued|yesno }}</td>
+                        <td>
+                            {% if book.issued_to %}
+                                {{ book.issued_to.username }}
+                            {% else %}
+                                N/A
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button type="submit"><a href="{% url 'book_update' book.pk %}">Edit</a></button>
+                            <button type="submit"><a href="{% url 'book_delete' book.pk %}">Delete</a></button>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No books found.</p>
+        {% endif %}
+
+        <button type="submit"><a href="{% url 'book_create' %}">Add Book</a></button><br>
+        <div>
+            <button type="submit"><a href="{% url 'logout' %}">Logout</a></button>
+        </div>
+    </div>
+</body>
+</html>
