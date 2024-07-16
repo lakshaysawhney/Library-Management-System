@@ -14,4 +14,4 @@ This is a Library Management System Website having Authentication, Librarian sid
 
 1. Clone the repository:
    ```sh
-   git clone <https://github.com/lakshaysawhney/Library-Management-System.git>
+   git clone https://github.com/lakshaysawhney/Library-Management-System.git
