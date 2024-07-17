@@ -15,27 +15,27 @@ This is a Library Management System Website having Authentication, Librarian sid
 
 ## Demonstration 
 
-#### Home Page
+### Home Page
 ![Home Page](images/Home_page.jpg)
 
-#### Login Page
+### Login Page
 ![Login Page](images/Login_page.jpg)
 
-#### Librarian side functionality
+### Librarian side functionality
 ![Librarian_page](images/Librarian_page.jpg)
-Librarian is able to see list of all books in the library database, add a new book, update details of a particular book and delete a particular book from the database.
+- Librarian is able to see list of all books in the library database, add a new book, update details of a particular book and delete a particular book from the database.
 
 #### Student side functionality
 ![Student_page](images/Student_page.jpg)
-Student can see list of books available in the library for issuing. 
+- Student can see list of books available in the library for issuing. 
 
 #### Book returning functionality
 ![Issued_books](images/Issued_books.jpg)
-Student can see list of issued books and can return them. 
+- Student can see list of issued books and can return them. 
 
 #### Reminder functionality
 ![Reminder_functionality](images/Reminder_functionality.jpg)
-Screenshot of Reminder Email sent to respective Student, one day prior to the due-date.
+- Screenshot of Reminder Email sent to respective Student, one day prior to the due-date.
 
 ## Setup
 
