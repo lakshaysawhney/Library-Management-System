@@ -3,7 +3,7 @@
 This is a Library Management System Website having Authentication, Librarian side functionality, Student side functionality and reminder sending functionality built using [Django](https://www.djangoproject.com/).
 
 ## Project Structure and Working
-![Webchart](images/Project Structure & Working.jpg)
+![Webchart](images/Webchart.jpg)
 
 ## Features
 
